@@ -56,10 +56,15 @@ section.section a:visited {
 }
 
 .section {
-    padding: 50px;
+    padding: 70px 50px;
     max-width: 1140px;
     margin-left: auto;
     margin-right: auto
+}
+
+#about {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 @media (max-width: 768px) {
@@ -340,7 +345,7 @@ section.section a:visited {
     .work-screenshot {
         max-width: 50%;
         float: left;
-        margin-right: 30px
+        margin-right: 40px
     }
 }
 
