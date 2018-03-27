@@ -265,10 +265,10 @@ section.section a:visited {
     }
 }
 
-#work {
-    background: #fff;
-    color: #424242;
-    box-shadow: 1000px 0 0 0 #fff, -1000px 0 0 0 #fff;
+#intro {
+    background: #fbfbfb;
+    color: #525252;
+    box-shadow: 1000px 0 0 0 #fbfbfb, -1000px 0 0 0 #fbfbfb;
 }
 
 .work-list {
