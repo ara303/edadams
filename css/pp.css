@@ -1,10 +1,14 @@
 body {
-  max-width: 660px;
   font-size: 16px;
   line-height: 1.5;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   color: #444;
   background-color: #f0f0f0;
+}
+
+.pp {
+  max-width: 660px;
+  margin: 0 auto;
 }
 
 .pp-simple {
