@@ -6,6 +6,10 @@ body {
   background-color: #f0f0f0;
 }
 
+a {
+  color: #007faa;
+} 
+
 .pp {
   max-width: 660px;
   margin: 0 auto;
@@ -13,9 +17,9 @@ body {
 
 .pp-simple {
   padding: 18px 20px;
-  border: 2px solid #007faa;
+  border: 3px solid #007faa;
   margin-bottom: 1em;
-  border-radius: 2px;
+  border-radius: 3px;
 }
 
 .pp-simple p {
