@@ -406,6 +406,12 @@ p:last-child {
     margin-right: -15px
 }
 
+@media (max-width: 768px) {
+    .testimonials {
+        font-size: 0.9em;
+    }
+}
+
 .testimonial {
     padding-left: 15px;
     padding-right: 15px
@@ -425,9 +431,7 @@ p:last-child {
 }
 
 .from {
-    font-size: 1.15em;
     text-align: right;
-    margin-top: 15px
 }
 
 .from:before {
@@ -574,7 +578,7 @@ p:last-child {
 
 .history {
   list-style: none;
-  margin: 0 -20px;
+  margin: 0 -15px;
   padding: 0;
 }
 
@@ -592,7 +596,7 @@ p:last-child {
 @media (min-width: 769px) {
     .history-item {
         width: 33.333%;
-        margin-top: 40px;
+        margin-top: 30px;
     }
 }
 
@@ -607,7 +611,7 @@ p:last-child {
     .history-item {
         width: 100%;
         margin-top: 0;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
     
     .history-item:last-child {
@@ -616,7 +620,7 @@ p:last-child {
 }
 
 .history-inner {
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 .history-item-title {
@@ -626,5 +630,5 @@ p:last-child {
 }
 
 .history-item-description {
-  font-size: 0.9em;
+  font-size: 0.875em;
 }
