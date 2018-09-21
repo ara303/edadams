@@ -280,6 +280,9 @@ p:last-child {
 @media (min-width: 769px) {
     .work-inner { 
         display: flex;
+    }
+    
+    .work-screenshot {
         margin-right: 40px
     }
 
