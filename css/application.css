@@ -561,3 +561,31 @@ section.section a:visited {
 .footer-social-new a:hover svg {
     fill: #fff
 }
+
+.history {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 769px) {
+    .history-item {
+      width: 33.333%;
+    }
+}
+
+.history-inner {
+    padding: 11px 15px;
+}
+
+.history-item-title {
+  font-size: 1.6em;
+  line-height: 1.2;
+  font-family: 'Merriweather Sans';
+}
+
+.history-item-description {
+  font-size: 0.9em;
+}
