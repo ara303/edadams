@@ -370,13 +370,13 @@ p:last-child {
 }
 
 .work-project-title {
-    line-height: 1.2;
-    font-size: 1.6em;
+    line-height: 1;
+    font-size: 1.7em;
 }
 
 .work-desc,
 .work-client {
-    font-size: 0.9em
+    font-size: 0.9em;
 }
 
 .work-view-btn {
