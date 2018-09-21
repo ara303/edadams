@@ -21,7 +21,7 @@ html {
 body {
     font: normal 18px/1.72 'Merriweather',serif;
     color: #d7e3ec;
-    background-color: #424242;
+    background-color: #434343;
     margin: 0;
     overflow-x: hidden;
 }
@@ -51,10 +51,6 @@ p {
 
 p:last-child {
     margin-bottom: 0
-}
-
-section.section a:visited {
-    color: #0070c0
 }
 
 .section {
@@ -127,8 +123,7 @@ section.section a:visited {
 .subtitle {
     margin-top: 1em;
     font-size: 1.04em;
-    opacity: .925;
-    font-family: merriweather sans;
+    font-family: 'Merriweather Sans';
 }
 
 .title a {
@@ -269,9 +264,9 @@ section.section a:visited {
 }
 
 #work {
-    background: #eaeaea;
-    color: #454545;
-    box-shadow: 1000px 0 0 0 #eaeaea, -1000px 0 0 0 #eaeaea;
+    background: #f5f5f5;
+    color: #434343;
+    box-shadow: 1000px 0 0 0 #f5f5f5, -1000px 0 0 0 #f5f5f5;
 }
 
 .work-list {
