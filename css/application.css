@@ -19,14 +19,16 @@ html {
 }
 
 body {
-    font: normal 18px/1.6 lato,sans-serif;
+    font: normal 18px/1.6 'Nunito',serif;
     color: #d7e3ec;
     background-color: #424242;
     margin: 0;
     overflow-x: hidden;
-    -webkit-font-smoothing: antialiased;
-    -moz-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito Sans',sans-serif;
+    font-weight: 700;
 }
 
 .intro-image-svg {
@@ -39,7 +41,7 @@ a {
 }
 
 a:hover {
-    text-decoration: underline
+    text-decoration: underline;
 }
 
 p {
@@ -390,7 +392,7 @@ section.section a:visited {
 }
 
 .work-view-btn:hover {
-    color: #fff;
+    color: #fff !important;
     background-color: #0096ff;
     text-decoration: none
 }
