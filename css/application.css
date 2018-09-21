@@ -19,7 +19,7 @@ html {
 }
 
 body {
-    font: normal 18px/1.6 'Merriweather',serif;
+    font: normal 18px/1.72 'Merriweather',serif;
     color: #d7e3ec;
     background-color: #424242;
     margin: 0;
@@ -281,7 +281,7 @@ section.section a:visited {
 }
 
 .work-item {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
 }
 
 .work-item:last-child {
@@ -316,7 +316,7 @@ section.section a:visited {
 }
 
 .fake-addr-bar {
-    background: white;
+    background: #fff;
     height: 8px;
     border-radius: 2px;
     margin-left: 49px;
@@ -327,7 +327,7 @@ section.section a:visited {
 .fake-next-btn {
     height: 8px;
     width: 8px;
-    background: #ffffff;
+    background: #fff;
     float: right;
     position: absolute
 }
@@ -342,6 +342,11 @@ section.section a:visited {
     border-radius: 3px 0 0 3px;
     top: 8px;
     right: 17px
+}
+
+.work-screenshot {
+    border-radius: 3px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
 }
 
 @media (min-width: 769px) {
