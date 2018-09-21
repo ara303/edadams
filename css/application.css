@@ -269,12 +269,6 @@ p:last-child {
     box-shadow: 1000px 0 0 0 #f5f5f5, -1000px 0 0 0 #f5f5f5;
 }
 
-.work-list {
-    margin: 0;
-    padding: 0;
-    list-style: none
-}
-
 .work-item {
     margin-bottom: 50px;
 }
@@ -283,15 +277,30 @@ p:last-child {
     margin-bottom: 0;
 }
 
+@media (min-width: 769px) {
+    .work-inner { 
+        display: flex;
+        margin-right: 40px
+    }
+
+    .work-information {
+        max-width: 50%;
+    }
+}
+
 .work-item h3,
 .work-item p {
     margin-top: 0;
-    margin-bottom: 10px
+    margin-bottom: 15px
 }
 
 .work-item h3:last-child,
 .work-item p:last-child {
     margin-bottom: 0
+}
+
+.work-desc {
+    line-height: 1.9;
 }
 
 .fake-ui {
@@ -341,15 +350,7 @@ p:last-child {
 
 .work-screenshot {
     border-radius: 3px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.25);
-}
-
-@media (min-width: 769px) {
-    .work-screenshot {
-        max-width: 50%;
-        float: left;
-        margin-right: 40px
-    }
+    box-shadow: 0 5px 15px rgba(0,0,0,0.225);
 }
 
 @media (max-width: 768px) {
@@ -378,8 +379,8 @@ p:last-child {
 .work-view-btn {
     display: inline-block;
     color: #0096ff;
-    line-height: 1;
-    padding: 5px 11px;
+    line-height: 1.9;
+    padding: 0 11px;
     border: 1px solid #0096ff;
     border-radius: 3px;
     -webkit-transition: all 0.1s ease-in-out;
