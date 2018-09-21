@@ -431,6 +431,7 @@ p:last-child {
 }
 
 .from {
+    margin-top: 15px;
     text-align: right;
 }
 
