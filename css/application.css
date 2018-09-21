@@ -95,8 +95,8 @@ p:last-child {
 
 @media (min-width: 769px) {
     .header .section {
-        padding-top: 80px;
-        padding-bottom: 80px
+        padding-top: 100px;
+        padding-bottom: 100px
     }
 }
 
@@ -215,7 +215,7 @@ p:last-child {
 
 @media (min-width: 769px) {
     .intro-right {
-        margin-top: 5px;
+        margin-top: 15px;
         float: right;
         width: 25%
     }
