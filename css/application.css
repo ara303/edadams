@@ -126,10 +126,9 @@ section.section a:visited {
 
 .subtitle {
     margin-top: 1em;
-    font-size: 0.925em;
+    font-size: 1.04em;
     opacity: .925;
-    text-transform: uppercase;
-    font-family: 'Merriweather Sans';
+    font-family: merriweather sans;
 }
 
 .title a {
