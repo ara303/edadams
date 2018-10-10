@@ -116,14 +116,14 @@ p:last-child {
 }
 
 .title {
-    font-size: 3.5em;
-    font-family: 'Merriweather';
+    font-size: 3.2em;
+    font-family: 'Merriweather Sans';
 }
 
 .subtitle {
     margin-top: 1em;
     font-size: 1.04em;
-    font-family: 'Merriweather Sans';
+    font-family: 'Merriweather';
 }
 
 .title a {
