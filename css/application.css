@@ -689,6 +689,7 @@ p:last-child {
 .contact-button-start:hover {
   text-decoration: none;
   background-image: linear-gradient(to bottom, #0093fa, #004b80);
+  cursor: pointer;
 }
 
 .form-disclaimer {
