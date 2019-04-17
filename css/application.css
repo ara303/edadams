@@ -663,14 +663,15 @@ p:last-child {
 
 .form-input:focus {
   outline: none;
-  box-shadow: 0 0 3px #d7e3ec;
+  background: rgba(255,255,255,0.125);
 }
 
 .form-info-help {
   margin-top: 5px;
   margin-bottom: 0;
   text-align: right;
-  font-size: 0.89em;
+  font-size: 0.8em;
+  opacity: 0.8;
 }
 
 .form-textarea {
