@@ -638,6 +638,11 @@ p:last-child {
   font-size: 0.875em;
 }
 
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 .form-label {
   display: block;
   margin-bottom: 10px;
@@ -652,19 +657,20 @@ p:last-child {
   width: 100%;
   padding: 10px;
   border-radius: 4px;
-  border: 1px solid #007aff;
+  border: 1px solid #d7e3ec;
+  background: transparent;
 }
 
 .form-input:focus {
   outline: none;
-  box-shadow: 0 0 3px #007aff;
+  box-shadow: 0 0 3px #d7e3ec;
 }
 
 .form-info-help {
   margin-top: 5px;
   margin-bottom: 0;
   text-align: right;
-  font-size: 0.94em;
+  font-size: 0.89em;
 }
 
 .form-textarea {
@@ -679,17 +685,16 @@ p:last-child {
 }
 
 .form-disclaimer {
-  font-size: 0.94em;
-  padding: 17px 20px;
-  border: 1px solid #444;
-  color: #444;
+  font-size: 0.92em;
+  padding: 14px 20px;
+  border: 1px solid;
 }
 
 .form-disclaimer p {
   margin: 0;
 }
 
-.form-disclaimer .form-disclaimer-larger {
+.form-disclaimer p.big {
   margin-bottom: 10px;
   font-weight: bold;
 }
