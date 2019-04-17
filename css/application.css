@@ -680,7 +680,7 @@ p:last-child {
   padding-top: 5px;
   padding-bottom: 5px;
   line-height: 1.45;
-  min-height: 100px;
+  min-height: 160px;
 }
 
 .form-section {
@@ -700,7 +700,7 @@ p:last-child {
     background: linear-gradient(-10deg, #0e89eb 33%, #41a8f9 100%);
     color: #fff;
     border: none;
-    padding: 20px 24px;
+    padding: 25px 29px;
     border-radius: 4px;
     line-height: 1;
     text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.033), -1px 0 1px rgba(0, 0, 0, 0.033), -1px 1px 1px rgba(0, 0, 0, 0.033), 0 -1px 1px rgba(0, 0, 0, 0.033), 0 0 1px rgba(0, 0, 0, 0.033), 0 1px 1px rgba(0, 0, 0, 0.033), 1px -1px 1px rgba(0, 0, 0, 0.033), 1px 0 1px rgba(0, 0, 0, 0.033), 1px 1px 1px rgba(0, 0, 0, 0.033);
@@ -708,11 +708,11 @@ p:last-child {
 
 .form-disclaimer {
   margin: 0;
-  font-size: 0.92em;
+  font-size: 0.9em;
   padding: 14px 20px;
   border: 1px solid;
-  opacity: 0.675;
-  text-shadow: 0 1px 1px rgba(0,0,0,0.675);
+  opacity: 0.625;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.75);
 }
 
 .form-disclaimer p {
