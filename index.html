@@ -219,7 +219,12 @@
 
     <section class="section section-contact" id="contact">
       <div class="email-container">
-        <a class="typeform-share button email" href="https://edadams.typeform.com/to/JI3B4p" data-mode="popup" style="display:inline-block;text-decoration:none;color:white;cursor:pointer;font-size:20px;line-height:50px;text-align:center;margin:0;height:50px;padding:0px 33px;border-radius:25px;max-width:100%;font-weight:bold" target="_blank">Contact me now</a> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm_share", b="https://embed.typeform.com/"; if(!gi.call(d,id)){ js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+        <form name="contact" method="POST" data-netlify="true">
+          <label>Name: <input type="text" name="name" /></label>   
+          <label>Email: <input type="email" name="email" /></label>
+          <label>How can I help? <textarea name="message"></textarea></label>
+          <button type="submit">Send message</button>
+        </form>
       </div>
     </section>
 
