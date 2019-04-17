@@ -637,3 +637,59 @@ p:last-child {
 .history-item-description {
   font-size: 0.875em;
 }
+
+.form-label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.form-input {
+  margin: 0;
+  padding: 10px;
+  font: inherit;
+  color: inherit;
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #007aff;
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 0 3px #007aff;
+}
+
+.form-info-help {
+  margin-top: 5px;
+  margin-bottom: 0;
+  text-align: right;
+  font-size: 0.94em;
+}
+
+.form-textarea {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  line-height: 1.45;
+  min-height: 100px;
+}
+
+.form-section {
+  margin-bottom: 30px;
+}
+
+.form-disclaimer {
+  font-size: 0.94em;
+  padding: 17px 20px;
+  border: 1px solid #444;
+  color: #444;
+}
+
+.form-disclaimer p {
+  margin: 0;
+}
+
+.form-disclaimer .form-disclaimer-larger {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
