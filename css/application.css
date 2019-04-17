@@ -644,15 +644,17 @@ p:last-child {
 }
 
 .form-label {
+  font-family: 'Merriweather Sans',sans-serif;
+  font-weight: 700;
   display: block;
   margin-bottom: 10px;
   font-weight: bold;
 }
 
 .form-input {
+  font: inherit;
   margin: 0;
   padding: 10px;
-  font: inherit;
   color: inherit;
   width: 100%;
   padding: 10px;
@@ -683,6 +685,25 @@ p:last-child {
 
 .form-section {
   margin-bottom: 30px;
+}
+
+.form-section-submit {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+}
+
+.form-submit {
+    font: inherit;
+    font-family: 'Merriweather Sans',sans-serif;
+    font-weight: 700;
+    background: linear-gradient(-10deg, #0e89eb 33%, #41a8f9 100%);
+    color: #fff;
+    border: none;
+    padding: 20px 24px;
+    border-radius: 4px;
+    line-height: 1;
+    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.033), -1px 0 1px rgba(0, 0, 0, 0.033), -1px 1px 1px rgba(0, 0, 0, 0.033), 0 -1px 1px rgba(0, 0, 0, 0.033), 0 0 1px rgba(0, 0, 0, 0.033), 0 1px 1px rgba(0, 0, 0, 0.033), 1px -1px 1px rgba(0, 0, 0, 0.033), 1px 0 1px rgba(0, 0, 0, 0.033), 1px 1px 1px rgba(0, 0, 0, 0.033);
 }
 
 .form-disclaimer {
