@@ -692,6 +692,10 @@ p:last-child {
   cursor: pointer;
 }
 
+.form-section-messages p {
+    display: none;
+}
+
 .form-disclaimer {
   margin: 0;
   font-size: 0.9em;
