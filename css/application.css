@@ -673,6 +673,8 @@ p:last-child {
 
 .form-submit,
 .contact-button-start {
+  border: none;
+  font-size: inherit;
   font-family: 'Merriweather Sans',sans-serif;
   font-weight: 700;
   padding: 20px 30px;
@@ -685,6 +687,7 @@ p:last-child {
 
 .form-submit:hover,
 .contact-button-start:hover {
+  text-decoration: none;
   background-image: linear-gradient(to bottom, #0093fa, #004b80);
 }
 
