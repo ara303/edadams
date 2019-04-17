@@ -688,6 +688,8 @@ p:last-child {
   font-size: 0.92em;
   padding: 14px 20px;
   border: 1px solid;
+  opacity: 0.675;
+  text-shadow: 0 1px 1px rgba(0,0,0,0.675);
 }
 
 .form-disclaimer p {
@@ -696,5 +698,5 @@ p:last-child {
 
 .form-disclaimer p.big {
   margin-bottom: 10px;
-  font-weight: bold;
+  font-size: 1.2em;
 }
