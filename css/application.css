@@ -443,30 +443,6 @@ p:last-child {
     content: '— '
 }
 
-.email-container .email {
-    display: block;
-    max-width: 250px;
-    padding: 25px;
-    color: #fff;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.3rem;
-    border-radius: 500px;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#0096ff), to(#005a99));
-    background-image: linear-gradient(to bottom, #0096ff, #005a99);
-    text-shadow: 0 1px rgba(0, 0, 0, 0.2);
-    margin: 0 auto;
-    -webkit-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.4);
-    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.4);
-    font-family: 'Merriweather Sans';
-}
-
-.email-container .email:hover {
-    text-decoration: none;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#0093fa), to(#004b80));
-    background-image: linear-gradient(to bottom, #0093fa, #004b80)
-}
-
 .footer {
     background-color: #565656;
     color: #f5f5f5;
@@ -705,6 +681,11 @@ p:last-child {
   background-image: linear-gradient(to bottom, #0096ff, #005a99);
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.033), -1px 0 1px rgba(0, 0, 0, 0.033), -1px 1px 1px rgba(0, 0, 0, 0.033), 0 -1px 1px rgba(0, 0, 0, 0.033), 0 0 1px rgba(0, 0, 0, 0.033), 0 1px 1px rgba(0, 0, 0, 0.033), 1px -1px 1px rgba(0, 0, 0, 0.033), 1px 0 1px rgba(0, 0, 0, 0.033), 1px 1px 1px rgba(0, 0, 0, 0.033);
   box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.4);
+}
+
+.form-submit:hover,
+.contact-button-start:hover {
+  background-image: linear-gradient(to bottom, #0093fa, #004b80);
 }
 
 .form-disclaimer {
