@@ -7,7 +7,7 @@
 }
 
 html {
-    -webkit-box-sizing: border-box;
+    -webkit-box-sizing: border-box;f
     box-sizing: border-box
 }
 
@@ -507,9 +507,7 @@ p:last-child {
 .footer-new svg {
     fill: #b0b0b0;
     width: 100%;
-    max-width: 1.3em;
-    -webkit-transition: color 0.1s linear;
-    transition: color 0.1s linear
+    max-width: 2em;
 }
 
 .footer-inner-new {
