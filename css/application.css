@@ -663,7 +663,6 @@ p:last-child {
 .form-section-submit {
     display: flex;
     justify-content: center;
-    margin-bottom: 60px;
 }
 
 .contact-button-wrapper {
@@ -698,6 +697,10 @@ p:last-child {
 
 .form-section-messages .is-visible p {
     display: block;
+}
+
+.form-section-disclaimer {
+    margin-top: 60px;
 }
 
 .form-disclaimer {
