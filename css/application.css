@@ -712,6 +712,34 @@ p:last-child {
   text-shadow: 0 1px 1px rgba(0,0,0,0.75);
 }
 
+.is-visible p {
+    display: block;
+}
+
+.form-success,
+.form-failure {
+    padding: 14px 20px;
+    color: #fff;
+    border-radius: 4px;
+}
+
+.form-success {
+    background: #01ad0f;
+}
+
+.form-failure {
+    background: #ff3636;
+}
+
+.form-failure a {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.form-failure a:hover {
+    opacity: 0.85;
+}
+
 .form-disclaimer p {
   margin: 0;
 }
