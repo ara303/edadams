@@ -612,6 +612,25 @@ p:last-child {
   font-size: 0.875em;
 }
 
+/**
+ * Privacy policy
+ */
+.pp-simple {
+    margin-bottom: 30px;
+}
+
+.pp-full {
+    display: none;
+    margin-top: 30px;
+}
+
+.pp-full.is-visible {
+    display: block;
+}
+
+/**
+ * Contact form
+ */
 .form-contact {
   max-width: 600px;
   margin: 0 auto;
