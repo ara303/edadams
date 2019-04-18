@@ -696,6 +696,10 @@ p:last-child {
     display: none;
 }
 
+.form-section-messages .is-visible p {
+    display: block;
+}
+
 .form-disclaimer {
   margin: 0;
   font-size: 0.9em;
