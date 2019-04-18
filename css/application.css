@@ -636,11 +636,12 @@ p:last-child {
   border-radius: 4px;
   border: 1px solid #a7b0b7;
   background: transparent;
+  font-size: 0.95em;
 }
 
 .form-textarea {
   line-height: 1.45;
-  min-height: 160px;
+  min-height: 200px;
 }
 
 .form-input:focus {
