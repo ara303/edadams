@@ -7,7 +7,7 @@
 }
 
 html {
-    -webkit-box-sizing: border-box;f
+    -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
 
@@ -566,6 +566,12 @@ p:last-child {
         display: flex;
         flex-wrap: wrap;
     }
+}
+
+.history-intro {
+  margin-bottom: 30px;
+  font-size: 1.1em;
+  color: #505050;
 }
 
 .history-item:nth-child(-n+3) {
