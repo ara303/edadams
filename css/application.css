@@ -1,3 +1,5 @@
+@view-transition{navigation: auto;}
+
 .section:after,
 .intro-wrap:after,
 .work-item:after {
