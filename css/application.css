@@ -1,4 +1,6 @@
-@view-transition{navigation: auto;}
+@view-transition {
+    navigation: auto;
+}
 
 .section:after,
 .intro-wrap:after,
@@ -371,7 +373,7 @@ p:last-child {
 .work-screenshot-img {
     border-radius: 0 0 3px 3px;
     border-top: 0;
-    width: 100%;
+    max-width: 500px;
     display: block;
 }
 
@@ -431,7 +433,7 @@ p:last-child {
 }
 
 @media (max-width: 768px) {
-    .testimonial:not(: last-child) {
+    .testimonial:not(:last-child) {
         margin-bottom: 30px
     }
 }
