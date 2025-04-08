@@ -382,8 +382,10 @@ p:last-child {
 }
 
 .work-project-title {
-    line-height: 1;
-    font-size: 1.68em;
+    line-height: 1.4;
+    font-size: 1.5em;
+    text-box-trim: trim-both;
+    text-box-edge: cap alphabetic;
 }
 
 .work-desc,
@@ -413,6 +415,7 @@ p:last-child {
         max-width: 61px;
         margin-left: 0;
         margin-top: 15px;
+        top: 0;
     }
 }
 
