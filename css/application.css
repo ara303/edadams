@@ -120,7 +120,7 @@ p:last-child {
 
 .title,
 .subtitle {
-    --text-shadow-colour: rgba(0, 0, 0, 1.75);
+    --text-shadow-colour: rgba(0, 0, 0, 0.855);
     color: #fff;
     margin-top: 0;
     margin-bottom: 0;
