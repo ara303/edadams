@@ -107,18 +107,10 @@ p:last-child {
       radial-gradient(circle at 100% 92%, #2ef598, transparent 60%);
 }
 
-@media (-webkit-min-device-pixel-ratio: 2),
-(min-resolution: 192dpi) {
-    .header {
-        background-image: url("../img/bg_3@2x.png"), linear-gradient(-10deg, #0e89eb 33%, #41a8f9 100%);
-        background-size: 64px, auto
-    }
-}
-
 @media (min-width: 769px) {
     .header .section {
         padding-top: 160px;
-        padding-bottom: 160px
+        padding-bottom: 160px;
     }
 }
 
@@ -128,13 +120,14 @@ p:last-child {
 
 .title,
 .subtitle {
+    --text-shadow-colour: rgba(0, 0, 0, 1.75);
     color: #fff;
     margin-top: 0;
     margin-bottom: 0;
     line-height: 1;
     text-align: center;
     font-weight: normal;
-    text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.05), -1px 0 1px rgba(0, 0, 0, 0.05), -1px 1px 1px rgba(0, 0, 0, 0.05), 0 -1px 1px rgba(0, 0, 0, 0.05), 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 1px rgba(0, 0, 0, 0.05), 1px -1px 1px rgba(0, 0, 0, 0.05), 1px 0 1px rgba(0, 0, 0, 0.05), 1px 1px 1px rgba(0, 0, 0, 0.05)
+    text-shadow: -1px -1px 1px var(--text-shadow-colour), -1px 0 1px var(--text-shadow-colour), -1px 1px 1px var(--text-shadow-colour), 0 -1px 1px var(--text-shadow-colour), 0 0 1px var(--text-shadow-colour), 0 1px 1px var(--text-shadow-colour), 1px -1px 1px var(--text-shadow-colour), 1px 0 1px var(--text-shadow-colour), 1px 1px 1px var(--text-shadow-colour)
 }
 
 .title {
