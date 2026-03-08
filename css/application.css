@@ -93,7 +93,13 @@ p:last-child {
 }
 
 .header {
-    background-image: url("../img/bg_3.png"), linear-gradient(-10deg, #0e89eb 33%, #41a8f9 100%)
+    /* background-image: url("../img/bg_3.png"), linear-gradient(-10deg, #0e89eb 33%, #41a8f9 100%); */
+    background-image:
+      url("../img/bg_3.png"),
+      radial-gradient(ellipse at top left, #5190f5, transparent 70%),
+      radial-gradient(ellipse at top right, #8402ed, transparent 70%),
+      radial-gradient(ellipse at bottom left, #24d6a9, transparent 70%),
+      radial-gradient(ellipse at bottom right, #4ff52e, transparent 70%);
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
