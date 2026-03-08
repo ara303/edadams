@@ -109,8 +109,8 @@ p:last-child {
 
 @media (min-width: 769px) {
     .header .section {
-        padding-top: 160px;
-        padding-bottom: 160px;
+        padding-top: 180px;
+        padding-bottom: 180px;
     }
 }
 
