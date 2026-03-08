@@ -96,10 +96,10 @@ p:last-child {
     /* background-image: url("../img/bg_3.png"), linear-gradient(-10deg, #0e89eb 33%, #41a8f9 100%); */
     background-image:
       url("../img/bg_3.png"),
-      radial-gradient(ellipse at top left, #5190f5, transparent 70%),
-      radial-gradient(ellipse at top right, #8402ed, transparent 70%),
-      radial-gradient(ellipse at bottom left, #24d6a9, transparent 70%),
-      radial-gradient(ellipse at bottom right, #4ff52e, transparent 70%);
+      radial-gradient(circle at 51% 51%, #5190f5, transparent 60%),
+      radial-gradient(circle at 95% 5%, #9639f3, transparent 60%),
+      radial-gradient(circle at 12% 82%, #24d6a9, transparent 60%),
+      radial-gradient(circle at 100% 92%, #2ef598, transparent 60%);
 }
 
 @media (-webkit-min-device-pixel-ratio: 2),
@@ -112,8 +112,8 @@ p:last-child {
 
 @media (min-width: 769px) {
     .header .section {
-        padding-top: 100px;
-        padding-bottom: 100px
+        padding-top: 160px;
+        padding-bottom: 160px
     }
 }
 
