@@ -96,7 +96,7 @@ p:last-child {
     /* background-image: url("../img/bg_3.png"), linear-gradient(-10deg, #0e89eb 33%, #41a8f9 100%); */
     background-image:
       url("../img/bg_3.png"),
-      radial-gradient(circle at 51% 51%, #5190f5, transparent 60%),
+      radial-gradient(circle at 51% 51%, #2478ff, transparent 60%),
       radial-gradient(circle at 95% 5%, #9639f3, transparent 60%),
       radial-gradient(circle at 12% 82%, #24d6a9, transparent 60%),
       radial-gradient(circle at 100% 92%, #2ef598, transparent 60%);
