@@ -1,8 +1,0 @@
-{
-  "routes": [
-    {
-      "pattern": "edadams.io",
-      "custom_domain": true
-    }
-  ]
-}
