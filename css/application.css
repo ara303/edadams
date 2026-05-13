@@ -579,57 +579,30 @@ p:last-child {
     box-shadow: 1000px 0 0 0 #f5f5f5, -1000px 0 0 0 #f5f5f5;
 }
 
-.history {
-  list-style: none;
-  margin: 0 -15px;
-  padding: 0;
-}
-
-@media (min-width: 601px) {
-    .history {
-        display: flex;
-        flex-wrap: wrap;
-    }
-}
-
 .history-intro {
   margin-bottom: 30px;
   font-size: 1.1em;
   color: #505050;
 }
 
-.history-item:nth-child(-n+3) {
-    margin-top: 0;
+.history {
+  --columns-count: 3;
+  
+  display: grid;
+  grid-template-columns: repeat( var(--columns-count), 1fr );
+  gap: 2em 1em;
 }
 
-@media (min-width: 769px) {
-    .history-item {
-        width: 33.333%;
-        margin-top: 30px;
-    }
+@media (max-width: 900px) {
+  .history {
+    --columns-count: 2;
+  }
 }
 
-@media (max-width: 768px) and (min-width: 601px) {
-    .history-item {
-        width: 50%;
-        margin-top: 40px;
-    }
-}
-
-@media (max-width: 600px) {
-    .history-item {
-        width: 100%;
-        margin-top: 0;
-        margin-bottom: 30px;
-    }
-    
-    .history-item:last-child {
-        margin-bottom: 0;
-    }
-}
-
-.history-inner {
-    padding: 0 15px;
+@media (max-width: 500px) {
+  .history {
+    --columns-count: 1;
+  }
 }
 
 .history-item-title {
