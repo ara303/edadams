@@ -61,8 +61,8 @@ p:last-child {
 }
 
 .section {
-    padding: 70px 50px;
-    max-width: 1140px;
+    padding: 80px 40px;
+    max-width: 1280px;
     margin-left: auto;
     margin-right: auto
 }
@@ -590,7 +590,7 @@ p:last-child {
   
   display: grid;
   grid-template-columns: repeat( var(--columns-count), 1fr );
-  gap: 2em 1em;
+  gap: 3em 1.75em;
 }
 
 @media (max-width: 900px) {
@@ -606,7 +606,7 @@ p:last-child {
 }
 
 .history-item-title {
-  font-size: 1.5em;
+  font-size: 1.45em;
   line-height: 1.2;
   font-family: 'Merriweather Sans';
 }
