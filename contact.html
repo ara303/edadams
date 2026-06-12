@@ -20,7 +20,7 @@
       </div>
     </header>
     <section class="section section-contact" id="contact">
-      <form class="form-contact" name="contact" method="POST" action="https://formspree.io/f/mzdqjvrg">
+      <form class="form-contact" id="form-contact" name="contact" method="POST" action="https://formspree.io/f/mzdqjvrg">
         <div class="form-section form-section-name">
           <label class="form-label">Your name</label>
           <input class="form-input" type="text" name="name" required /> 
@@ -43,7 +43,7 @@
         <div class="form-section form-section-disclaimer">
           <div class="form-disclaimer">
             <p class="big">Just to let you know&hellip;</p>
-            <p>When you provide your information, it is emailed to me and stored on my email account so I can reply to you. All information is visible only to me. (Under GDPR, I’m required to tell you this.)</p>
+            <p>When you provide your information, it is emailed to me and stored on my email account so I can reply to you. All information is visible only to me.</p>
           </div>
         </div>
       </form>
@@ -83,6 +83,19 @@
         </ul>
       </div>
     </footer>
-    <script src="js/contact.js"></script>
+
+<script>
+  window.formspree =
+    window.formspree ||
+    function () {
+      (formspree.q = formspree.q || []).push(arguments);
+    };
+  formspree(
+    'initForm', 
+    { formElement: '#form-contact', formId: 'mzdqjvrg' }
+  );
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+    
   </body>
 </html>
