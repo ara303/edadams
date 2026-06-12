@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .intro-image-svg {
-    fill: #d7e3ec
+    fill: #7d91a1;
 }
 
 a {
@@ -131,13 +131,13 @@ p:last-child {
 }
 
 .title {
-    font-size: 3.2em;
+    font-size: 4em;
     font-family: 'Merriweather Sans';
 }
 
 .subtitle {
     margin-top: 1em;
-    font-size: 1.04em;
+    font-size: 1.23em;
     font-family: 'Merriweather';
 }
 
