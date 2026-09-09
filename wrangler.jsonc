@@ -14,9 +14,7 @@
     "not_found_handling": "single-page-application"
   },
   /**
-   * Cloudflare Email Workers – native sending without third parties.
-   * Requires Email Routing enabled on the domain and a verified destination.
-   * Docs: https://developers.cloudflare.com/email-routing/email-workers/send-email-workers/
+   * https://developers.cloudflare.com/email-routing/email-workers/send-email-workers/
    */
   "send_email": [
     {
