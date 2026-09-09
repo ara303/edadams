@@ -1,14 +1,26 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "edadams",
+  "main": "worker.js",
   "compatibility_date": "2026-05-11",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "."
+    "directory": "src/",
+    "not_found_handling": "single-page-application"
   },
-  "compatibility_flags": [
-    "nodejs_compat"
+  /**
+   * Cloudflare Email Workers – native sending without third parties.
+   * Requires Email Routing enabled on the domain and a verified destination.
+   * Docs: https://developers.cloudflare.com/email-routing/email-workers/send-email-workers/
+   */
+  "send_email": [
+    {
+      "name": "EMAIL"
+    }
   ]
 }
