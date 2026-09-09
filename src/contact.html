@@ -20,25 +20,33 @@
       </div>
     </header>
     <section class="section section-contact" id="contact">
-      <form class="form-contact" id="form-contact" name="contact" method="POST" action="https://formspree.io/f/mzdqjvrg">
+      <form class="form-contact" id="form-contact" name="contact" method="POST" action="/api/contact" novalidate>
         <div class="form-section form-section-name">
-          <label class="form-label">Your name</label>
-          <input class="form-input" type="text" name="name" required /> 
+          <label class="form-label" for="contact-name">Your name</label>
+          <input class="form-input" type="text" name="name" id="contact-name" required autocomplete="name" maxlength="100" />
         </div>
         <div class="form-section form-section-info">
-          <label class="form-label">Email or phone number</label>
-          <input class="form-input" type="text" name="info" required />
+          <label class="form-label" for="contact-info">Email or phone number</label>
+          <input class="form-input" type="text" name="info" id="contact-info" required autocomplete="email" maxlength="200" />
           <p class="form-info-help">Let me know how you prefer to be contacted.</p>
         </div>
         <div class="form-section form-section-message">
-          <label class="form-label">How can I help?</label>
-          <textarea class="form-input form-textarea" name="message"></textarea></label> 
+          <label class="form-label" for="contact-message">How can I help?</label>
+          <textarea class="form-input form-textarea" name="message" id="contact-message" maxlength="5000"></textarea>
         </div>
+
+        <!-- Honeypot – must stay empty (bots fill it) -->
+        <div style="position:absolute;left:-5000px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
+          <label for="contact-website">Leave this field empty</label>
+          <input type="text" name="website" id="contact-website" tabindex="-1" autocomplete="off" />
+        </div>
+
         <div class="form-section form-section-submit">
           <button class="form-submit" type="submit">Send message</button>
         </div>
-        <div class="form-section form-section-messages" data-fs-success>
-          <p>Sent! Thank you. I'll respond as soon as I can.</p>
+        <div class="form-section form-section-messages">
+          <div class="form-success" id="form-success" role="status" aria-live="polite"></div>
+          <div class="form-failure" id="form-failure" role="alert" aria-live="assertive"></div>
         </div>
         <div class="form-section form-section-disclaimer">
           <div class="form-disclaimer">
@@ -84,18 +92,7 @@
       </div>
     </footer>
 
-<script>
-  window.formspree =
-    window.formspree ||
-    function () {
-      (formspree.q = formspree.q || []).push(arguments);
-    };
-  formspree(
-    'initForm', 
-    { formElement: '#form-contact', formId: 'mzdqjvrg' }
-  );
-</script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+    <script src="js/contact.js" defer></script>
     
   </body>
 </html>

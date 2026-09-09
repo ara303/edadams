@@ -1,14 +1,24 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "edadams",
+  "main": "worker.js",
   "compatibility_date": "2026-05-11",
+  "compatibility_flags": [
+    "nodejs_compat"
+  ],
   "observability": {
     "enabled": true
   },
   "assets": {
-    "directory": "."
+    "directory": "src/",
+    "not_found_handling": "single-page-application"
   },
-  "compatibility_flags": [
-    "nodejs_compat"
+  /**
+   * https://developers.cloudflare.com/email-routing/email-workers/send-email-workers/
+   */
+  "send_email": [
+    {
+      "name": "EMAIL"
+    }
   ]
 }
