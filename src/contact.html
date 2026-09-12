@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/application.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" defer></script>
   </head>
   <body class="home">
     <header class="header">
@@ -35,10 +36,8 @@
           <textarea class="form-input form-textarea" name="message" id="contact-message" maxlength="5000"></textarea>
         </div>
 
-        <!-- Honeypot – must stay empty (bots fill it) -->
-        <div style="position:absolute;left:-5000px;top:auto;width:1px;height:1px;overflow:hidden;" aria-hidden="true">
-          <label for="contact-website">Leave this field empty</label>
-          <input type="text" name="website" id="contact-website" tabindex="-1" autocomplete="off" />
+        <div class="form-section form-section-turnstile">
+          <div class="cf-turnstile" data-sitekey="0x4AAAAAAExkMyNYlYrP9EC2" data-action="contact" data-theme="light"></div>
         </div>
 
         <div class="form-section form-section-submit">

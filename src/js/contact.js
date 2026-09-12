@@ -45,15 +45,22 @@
     }
   }
 
+  // Turnstile tokens are single-use, so request a fresh one after every attempt
+  function resetTurnstile() {
+    if (window.turnstile && typeof window.turnstile.reset === "function") {
+      window.turnstile.reset();
+    }
+  }
+
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     clearMessages();
 
     const formData = new FormData(form);
-    // Honeypot client check – if filled, silently succeed
-    if (String(formData.get("website") || "").trim() !== "") {
-      showSuccess("Sent! Thank you. I'll respond as soon as I can.");
-      form.reset();
+
+    const turnstileToken = String(formData.get("cf-turnstile-response") || "").trim();
+    if (!turnstileToken) {
+      showFailure("Please complete the verification challenge before sending.");
       return;
     }
 
@@ -61,7 +68,7 @@
       name: String(formData.get("name") || "").trim(),
       info: String(formData.get("info") || "").trim(),
       message: String(formData.get("message") || "").trim(),
-      website: String(formData.get("website") || "").trim(),
+      turnstileToken,
     };
 
     // Minimal client-side validation (mirrors server)
@@ -89,6 +96,9 @@
 
       const data = await res.json().catch(() => ({}));
 
+      // The token has been consumed by the server side verification attempt
+      resetTurnstile();
+
       if (res.ok && data.success) {
         showSuccess(data.message);
         form.reset();
@@ -114,6 +124,7 @@
         btn.textContent = originalText;
       }
     } catch (err) {
+      resetTurnstile();
       showFailure("Network error – please check your connection and try again.");
       if (btn) {
         btn.removeAttribute("disabled");

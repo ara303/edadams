@@ -85,6 +85,36 @@ async function parseBody(request) {
   return {};
 }
 
+async function verifyTurnstile(token, ip, env) {
+  const secret = env.TURNSTILE_SECRET_KEY;
+  if (!secret) {
+    console.error("TURNSTILE_SECRET_KEY is not configured – set it with `wrangler secret put TURNSTILE_SECRET_KEY`");
+    return { ok: false, configured: false, error: "Verification is not configured. Please email directly." };
+  }
+
+  const body = new URLSearchParams({ secret, response: token });
+  if (ip && ip !== "unknown") body.append("remoteip", ip);
+
+  try {
+    const res = await fetch("https://challenges.cloudflare.com/turnstile/v0/siteverify", {
+      method: "POST",
+      body,
+    });
+    const outcome = await res.json().catch(() => ({}));
+    if (!outcome.success) {
+      return { ok: false, configured: true, errorCodes: outcome["error-codes"] || [] };
+    }
+    // Optional: pin the widget action so tokens from other forms can't be reused
+    if (outcome.action && outcome.action !== "contact") {
+      return { ok: false, configured: true, errorCodes: ["action-mismatch"] };
+    }
+    return { ok: true, configured: true };
+  } catch (e) {
+    console.error("Turnstile siteverify request failed:", e);
+    return { ok: false, configured: true, error: "Verification service unavailable. Please try again." };
+  }
+}
+
 export default {
   async fetch(request, env, ctx) {
     const url = new URL(request.url);
@@ -128,10 +158,20 @@ export default {
         return jsonResponse({ error: "Invalid request body." }, 400);
       }
 
-      // Honeypot – must be empty
-      if (data.website && String(data.website).trim() !== "") {
-        // Pretend success to not reveal honeypot
-        return jsonResponse({ success: true, message: "Message sent!" });
+      // Cloudflare Turnstile – verify the challenge token before doing anything else
+      const turnstileToken = String(data.turnstileToken || data["cf-turnstile-response"] || "").trim();
+      if (!turnstileToken) {
+        return jsonResponse({ error: "Please complete the verification challenge." }, 400);
+      }
+      const turnstile = await verifyTurnstile(turnstileToken, ip, env);
+      if (!turnstile.ok) {
+        if (turnstile.errorCodes && turnstile.errorCodes.length) {
+          console.warn("Turnstile verification failed:", turnstile.errorCodes.join(", "));
+        }
+        return jsonResponse(
+          { error: turnstile.error || "Verification failed. Please try again." },
+          turnstile.configured === false ? 500 : 403
+        );
       }
 
       const name = String(data.name || "").trim();
