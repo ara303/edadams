@@ -51,21 +51,6 @@ function jsonResponse(data, status = 200, extraHeaders = {}) {
   });
 }
 
-const rateLimitMap = new Map();
-function isRateLimited(ip) {
-  const now = Date.now();
-  const windowMs = 60 * 60 * 1000; // 1 hour
-  const max = 10; // 10 submissions per hour per IP
-  const entry = rateLimitMap.get(ip);
-  if (!entry || now > entry.resetAt) {
-    rateLimitMap.set(ip, { count: 1, resetAt: now + windowMs });
-    return false;
-  }
-  entry.count += 1;
-  if (entry.count > max) return true;
-  return false;
-}
-
 async function parseBody(request) {
   const ct = request.headers.get("content-type") || "";
   if (ct.includes("application/json")) {
@@ -126,30 +111,13 @@ export default {
 
     // --- API: POST /api/contact ---
     if (url.pathname === "/api/contact") {
-      // CORS preflight (same-origin, but allow tooling)
-      if (request.method === "OPTIONS") {
-        return new Response(null, {
-          status: 204,
-          headers: {
-            "Access-Control-Allow-Origin": request.headers.get("Origin") || "*",
-            "Access-Control-Allow-Methods": "POST, OPTIONS",
-            "Access-Control-Allow-Headers": "Content-Type",
-            "Access-Control-Max-Age": "86400",
-          },
-        });
-      }
-
       if (request.method !== "POST") {
         return jsonResponse({ error: "Method not allowed. Use POST." }, 405, {
-          Allow: "POST, OPTIONS",
+          Allow: "POST",
         });
       }
 
-      // Rate limit by IP
       const ip = request.headers.get("cf-connecting-ip") || request.headers.get("x-forwarded-for") || "unknown";
-      if (isRateLimited(ip)) {
-        return jsonResponse({ error: "Too many requests. Please try again later." }, 429);
-      }
 
       let data;
       try {
@@ -206,7 +174,6 @@ export default {
         ``,
         `Name: ${name}`,
         `Contact: ${info}`,
-        `IP: ${ip}`,
         `Time: ${new Date().toISOString()}`,
         `URL: ${request.headers.get("Referer") || request.headers.get("Origin") || "https://edadams.io/contact"}`,
         ``,
@@ -223,7 +190,6 @@ export default {
   <table cellpadding="6" cellspacing="0" style="border-collapse:collapse; width:100%;">
     <tr><td style="font-weight:bold; width:140px; background:#f5f5f5;">Name</td><td>${escapeHtml(name)}</td></tr>
     <tr><td style="font-weight:bold; background:#f5f5f5;">Contact</td><td>${escapeHtml(info)} ${replyTo ? `<span style="color:#666">(email – reply-to set)</span>` : ""}</td></tr>
-    <tr><td style="font-weight:bold; background:#f5f5f5;">IP</td><td>${escapeHtml(ip)}</td></tr>
     <tr><td style="font-weight:bold; background:#f5f5f5;">Time</td><td>${escapeHtml(new Date().toISOString())}</td></tr>
   </table>
   <div style="margin-top:16px; padding:12px; background:#f9f9f9; border:1px solid #e5e5e5; border-radius:6px;">
@@ -269,32 +235,6 @@ export default {
       }
     }
 
-    // --- Fallback: serve static assets (Cloudflare Workers Assets) ---
-    // If running with `assets.directory`, Cloudflare serves assets automatically.
-    // In wrangler dev the ASSETS binding may be available – try it before 404.
-    if (env.ASSETS && typeof env.ASSETS.fetch === "function") {
-      try {
-        // Let assets handle the request; clone URL to avoid mutation issues
-        const assetRes = await env.ASSETS.fetch(request);
-        // If assets returns 404 and we have SPA fallback, serve /index.html for extensionless routes
-        // But respect explicit 404 for API-like paths
-        if (assetRes.status !== 404) return assetRes;
-        // Only fallback to index.html for GET html navigation requests
-        if (request.method === "GET" && !url.pathname.includes(".") && !url.pathname.startsWith("/api/")) {
-          const indexReq = new Request(new URL("/index.html", url).toString(), request);
-          const indexRes = await env.ASSETS.fetch(indexReq);
-          if (indexRes.status !== 404) return indexRes;
-        }
-        return assetRes;
-      } catch (e) {
-        // fall through to 404
-        console.error("ASSETS.fetch error:", e);
-      }
-    }
-
-    // If no assets binding (e.g. in some local setups), return 404
-    // Cloudflare will still serve static assets via its own handler if this worker
-    // is deployed with `assets` – this branch is mainly for local wrangler dev edge cases.
     return new Response("Not found", { status: 404, headers: { "Content-Type": "text/plain" } });
   },
 };
