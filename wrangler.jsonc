@@ -7,7 +7,7 @@
     "nodejs_compat"
   ],
   "observability": {
-    "enabled": true
+    "enabled": false
   },
   "assets": {
     "directory": "src/",
