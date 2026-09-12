@@ -9,11 +9,6 @@
   "observability": {
     "enabled": true
   },
-  /**
-   * Contact form anti-spam (Cloudflare Turnstile).
-   * The public site key lives in src/contact.html; set the secret key with:
-   *   npx wrangler secret put TURNSTILE_SECRET_KEY
-   */
   "assets": {
     "directory": "src/",
     "not_found_handling": "single-page-application"
