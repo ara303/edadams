@@ -1,3 +1,8 @@
+:root {
+    --brand-blue: #2478ff
+    --padding: 1.25em;
+}
+
 @view-transition {
     navigation: auto;
 }
@@ -39,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 a {
-    color: #007fd9;
+    color: var(--brand-blue);
     text-decoration: none
 }
 
@@ -49,7 +54,7 @@ a:hover {
 
 p {
     margin-top: 0;
-    margin-bottom: 1.25em
+    margin-bottom: var(--padding);
 }
 
 p:last-child {
@@ -89,13 +94,6 @@ p:last-child {
 }
 
 .header {
-    /* background-image: url("../img/bg_3.png"), linear-gradient(-10deg, #0e89eb 33%, #41a8f9 100%); */
-    /* background-image:
-      url("../img/bg_3.png"),
-      radial-gradient(circle at 51% 51%, #2478ff, transparent 60%),
-      radial-gradient(circle at 95% 5%, #9639f3, transparent 60%),
-      radial-gradient(circle at 12% 82%, #24d6a9, transparent 60%),
-      radial-gradient(circle at 100% 92%, #2ef598, transparent 60%); */
     background-image:
       radial-gradient(circle at 51% 51%, #2478ff, transparent 60%),
       radial-gradient(circle at 95% 5%, #9639f3, transparent 60%),
@@ -615,16 +613,28 @@ p:last-child {
  * Privacy policy
  */
 .pp-simple {
-    margin-bottom: 30px;
+    margin-bottom: var(--padding);
 }
 
 .pp-full {
     display: none;
-    margin-top: 30px;
 }
 
 .pp-full.is-visible {
     display: block;
+}
+
+.pp-full blockquote {
+    margin: 0 0 var(--padding) var(--padding);
+    padding-left: var(--padding);
+    border-left: 3px solid var(--brand-blue);
+}
+
+.pp-full hr {
+    margin: var(--padding) 0;
+    background: var(--brand-blue);
+    height: 1px;
+    border: none;
 }
 
 /**
