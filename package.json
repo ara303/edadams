@@ -1,10 +1,18 @@
 {
+  "type": "module",
   "allowScripts": {
     "esbuild@0.28.1": true,
     "fsevents@2.3.3": true,
     "workerd@1.20260908.1": true
   },
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "dev": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy"
+  },
   "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
     "wrangler": "^4.130.0"
   }
 }
