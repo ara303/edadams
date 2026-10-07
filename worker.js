@@ -72,7 +72,7 @@ export default {
     const body = `Name: ${name}\nContact: ${info}\n\n${message || "(no message)"}\n`;
 
     const raw = [
-      `From: Contact Form <${FROM}>`,
+      `From: Ed Adams <${FROM}>`,
       `To: ${TO}`,
       ...(replyTo ? [`Reply-To: ${replyTo}`] : []),
       `Subject: =?UTF-8?B?${b64(`Contact form: ${name}`)}?=`,
