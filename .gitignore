@@ -7,3 +7,6 @@
 .env*
 !.env.example
 /node_modules
+
+# build output
+/dist
