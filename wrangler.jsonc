@@ -1,14 +1,10 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "edadams-contact",
+  "name": "edadams",
   "main": "worker.js",
-  "compatibility_date": "2026-10-01",
-
-  // Only run this worker for the contact endpoint, so the rest of the site is untouched.
-  // (Requires edadams.io to be on Cloudflare with the DNS record proxied/orange-cloud.)
+  "compatibility_date": "2026-10-01",  
+  "observability": { "enabled": false },
+  "assets": { "directory": "src/" },
   "routes": [{ "pattern": "edadams.io/api/contact", "zone_name": "edadams.io" }],
-
-  // Exposes env.EMAIL in the worker. Locking to one destination means
-  // this worker can only ever email you, even if the code is abused.
-  "send_email": [{ "name": "EMAIL", "destination_address": "edadams101@gmail.com" }]
+  "send_email": [{ "name": "EMAIL" }]
 }
