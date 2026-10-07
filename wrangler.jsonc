@@ -2,9 +2,14 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "edadams",
   "main": "worker.js",
-  "compatibility_date": "2026-10-01",  
-  "observability": { "enabled": false },
-  "assets": { "directory": "src/" },
-  "routes": [{ "pattern": "edadams.io/api/contact", "zone_name": "edadams.io" }],
-  "send_email": [{ "name": "EMAIL" }]
+  "compatibility_date": "2026-05-11",
+  "assets": {
+    "directory": "src/",
+    "not_found_handling": "single-page-application"
+  },
+  "send_email": [
+    {
+      "name": "EMAIL"
+    }
+  ]
 }
